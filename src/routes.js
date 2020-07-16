@@ -15,6 +15,8 @@ routes.post('/session', Session.store)
 
 routes.use(authMiddleware)
 
+routes.post('/games', Game.store)
+
 routes.put('/users', User.update)
 
 export default routes

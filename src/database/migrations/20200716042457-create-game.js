@@ -12,7 +12,7 @@ module.exports = {
 				references: { model: 'users', key: 'id' },
 				onUpdate: 'CASCADE',
 				onDelete: 'SET NULL',
-				allowNull: true,
+				allowNull: false,
 			},
 			time_game_started: {
 				type: Sequelize.DATE,
@@ -28,31 +28,31 @@ module.exports = {
 			},
 			winning_team: {
 				type: Sequelize.STRING,
-				allowNull: false,
+				allowNull: true,
 			},
 			good_team: {
 				type: Sequelize.STRING,
-				allowNull: false,
+				allowNull: true,
 			},
 			evil_team: {
 				type: Sequelize.STRING,
-				allowNull: false,
+				allowNull: true,
 			},
 			number_of_players: {
 				type: Sequelize.INTEGER,
-				allowNull: false,
+				allowNull: true,
 			},
 			players_names: {
 				type: Sequelize.ARRAY(Sequelize.STRING),
-				allowNull: false,
+				allowNull: true,
 			},
 			roles: {
 				type: Sequelize.ARRAY(Sequelize.STRING),
-				allowNull: false,
+				allowNull: true,
 			},
 			mission_history: {
 				type: Sequelize.ARRAY(Sequelize.STRING),
-				allowNull: false,
+				allowNull: true,
 			},
 			created_at: {
 				type: Sequelize.DATE,
