@@ -16,6 +16,7 @@ routes.post('/session', Session.store)
 routes.use(authMiddleware)
 
 routes.post('/games', Game.store)
+routes.put('/game/start', Game.start)
 
 routes.put('/users', User.update)
 
