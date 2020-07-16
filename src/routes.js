@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { User, Session } from './app/controllers'
+import { User, Session, Game } from './app/controllers'
 
 import authMiddleware from './app/middlewares/auth'
 
@@ -8,6 +8,8 @@ const routes = new Router()
 
 routes.get('/users', User.index)
 routes.post('/users', User.store)
+
+routes.get('/games', Game.index)
 
 routes.post('/session', Session.store)
 
